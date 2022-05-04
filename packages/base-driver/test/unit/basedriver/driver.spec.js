@@ -1,7 +1,5 @@
-// transpile:mocha
-
 import BaseDriver from '../../../lib';
-import {baseDriverUnitTests} from '../../basedriver';
+import {baseDriverUnitTests} from '@appium/test-support';
 
 baseDriverUnitTests(BaseDriver, {
   platformName: 'iOS',

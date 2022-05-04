@@ -280,8 +280,7 @@ const serverArgsDisallowedInConfig = new Map([
 export {getServerArgs, getExtensionArgs};
 
 /**
- * Alias
- * @typedef {import('../extension/manifest').ExtensionType} ExtensionType
+ * @typedef {import('@appium/types').ExtensionType} ExtensionType
  */
 
 /**

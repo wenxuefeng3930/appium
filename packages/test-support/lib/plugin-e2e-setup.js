@@ -1,7 +1,5 @@
-// @ts-check
-
 /* eslint-disable no-console */
-import {fs} from '@appium/support';
+import {fs} from 'appium/support';
 import {main as appiumServer} from 'appium';
 import getPort from 'get-port';
 import {info, success, warning} from 'log-symbols';
@@ -14,7 +12,7 @@ const APPIUM_BIN = require.resolve('appium');
  * @param {E2ESetupOpts} opts
  * @returns {void}
  */
-function e2eSetup(opts) {
+function pluginE2ESetup(opts) {
   let {
     appiumHome,
     before,
@@ -138,7 +136,7 @@ function e2eSetup(opts) {
   });
 }
 
-export {e2eSetup};
+export {pluginE2ESetup};
 
 /**
  * @typedef E2ESetupOpts
@@ -146,14 +144,14 @@ export {e2eSetup};
  * @property {Mocha.before} before - Mocha "before all" hook function
  * @property {Mocha.after} after - Mocha "after all" hook function
  * @property {Partial<import('appium').Args>} [serverArgs] - Arguments to pass to Appium server
- * @property {import('appium/types').InstallType & string} [driverSource] - Source of driver to install
+ * @property {import('appium/types').InstallType & string} driverSource - Source of driver to install
  * @property {string} [driverPackage] - Package name of driver to install
- * @property {string} [driverName] - Name of driver to install
- * @property {string} [driverSpec] - Spec of driver to install
- * @property {import('appium/types').InstallType & string} [pluginSource] - Source of plugin to install
+ * @property {string} driverName - Name of driver to install
+ * @property {string} driverSpec - Spec of driver to install
+ * @property {import('appium/types').InstallType & string} pluginSource - Source of plugin to install
  * @property {string} [pluginPackage] - Package name of plugin to install
- * @property {string} [pluginSpec] - Spec of plugin to install
- * @property {string} [pluginName] - Name of plugin to install
+ * @property {string} pluginSpec - Spec of plugin to install
+ * @property {string} pluginName - Name of plugin to install
  * @property {number} [port] - Port to use for Appium server
  * @property {string} [host] - Host to use for Appium server
  */
@@ -161,6 +159,7 @@ export {e2eSetup};
 /**
  * @typedef {import('@appium/types').AppiumServer} AppiumServer
  */
+
 /**
  * @typedef {import('appium/types').AppiumEnv} AppiumEnv
  */
