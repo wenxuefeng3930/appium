@@ -2,7 +2,7 @@
 
 import path from 'path';
 
-import {e2eSetup} from '@appium/base-plugin/build/test/helpers';
+import {pluginE2ESetup as e2eSetup} from 'appium/test';
 import {remote as wdio} from 'webdriverio';
 import {W3C_ELEMENT_KEY, MJSONWP_ELEMENT_KEY} from '../../lib/execute-child';
 import {fs} from 'appium/support';
