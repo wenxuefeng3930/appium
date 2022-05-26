@@ -1,7 +1,7 @@
 // transpile:mocha
 
 import axios from 'axios';
-import {baseDriverE2ETests} from '@appium/base-driver/build/test/basedriver';
+import {baseDriverE2ETests} from 'appium/test';
 import {FakeDriver, startServer} from '../../lib/index.js';
 import {
   BASE_CAPS,
